@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Bank Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body{
+        background-image: url(currency_exchange_rates.2e16d0ba.fill-1200x630.jpg);
+        background-size: cover;
+      }
+    </style>
+
+    <link rel="icon" href="https://png.pngtree.com/png-vector/20191030/ourmid/pngtree-currency-exchange-money-icon-design-for-web-png-image_1927649.jpg">
+</head>
+<body  class=" min-h-screen flex items-center justify-center">
+    <div class="w-full max-w-lg p-6 bg-slate-300 rounded shadow-lg" >
+        <h1 class="text-2xl font-bold mb-6 text-center">Flower Bank App</h1>
+        
+        <!-- Balance Display -->
+        <div class="mb-6 text-center">
+          <p class="text-xl font-semibold">Total Balance: $<span id="total-balance">0</span></p>
+        </div>
+    
+        <!-- Transaction Form -->
+        <form id="transaction-form" class="mb-4">
+          <input type="number" id="amount" placeholder="Enter Amount" class="w-full px-3 py-2 mb-2 border border-gray-300 rounded" required>
+          <div class="flex space-x-2">
+            <button type="button" onclick="addMoney()" class="w-full bg-green-500 text-white py-2 rounded">Add Money</button>
+            <button type="button" onclick="withdrawMoney()" class="w-full bg-red-500 text-white py-2 rounded">Withdraw</button>
+          </div>
+        </form>
+        
+        <!-- Transaction History -->
+        <h2 class="text-xl font-semibold mt-6 mb-2">Transaction History</h2>
+        <ul id="transaction-history" class="space-y-2"></ul>
+    </div>
+
+    <script src="node.js"></script>
+</body>
+</html>
